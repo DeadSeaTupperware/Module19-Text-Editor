@@ -19,7 +19,7 @@ export const putDb = async (content) => {
   const db = await openDB("jate", 1); // Connect to db
   const tx = db.transaction("jate", "readwrite"); // Create transaction
   const store = tx.objectStore("jate"); // Open desired object store
-  const request = store.put({ todo: content }); // Add to database
+  const request = store.put({ content }); // Add to database
   const result = await request; // Confirm
   console.log("Result:", result);
 };
