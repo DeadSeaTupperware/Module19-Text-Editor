@@ -12,6 +12,8 @@
 
 ## Description
 
+Site is available at [https://module19-text-editor.onrender.com](https://module19-text-editor.onrender.com).
+
 A Progressive Web Application project for offline and online text editing that runs in browser. A single-page application that meets the PWA criteria.
 
 ## Installation
