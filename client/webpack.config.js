@@ -19,23 +19,28 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: "./index.html",
-        title: "Text Editor",
+        title: "jate",
       }),
       // Service worker plugin
       new InjectManifest({
         swSrc: "./src-sw.js",
-        swDest: "service-worker.js",
+        swDest: "src-sw.js",
       }),
       // Manifest plugin
       new WebpackPwaManifest({
+        fingerprints: false,
+        inject: true,
         name: "jate",
         short_name: "jate",
         description: "Text editor that can be used online and offline",
         background_color: "#ffffff",
+        start_url: "./",
+        publicPath: "./",
         icons: [
           {
             src: path.resolve("src/images/logo.png"),
             sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join("assets", "icons"),
           },
         ],
       }),
